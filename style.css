@@ -1,17 +1,129 @@
-#title{
-	text-align: center;
-}
-#container {
-	width: 80%;
-	margin: 0 auto;
-	padding-top: 30px;
+html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url(/image/background.jpg);
+            background-size:100% 100%;
+            background-repeat: no-repeat;
 }
 
-#results {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+h1{
+	text-align: center;
+	font-size: 3.5em;
+	display: block;
+    margin-bottom: 1px;
+	color: 	#FFF0F5;
+	font-family: Georgia, serif;
 }
-img {
-	width: 300px;
-	height:300px;
+
+h2{
+	display: block;
+	text-align: center;
+    margin-top: 0.5em;
+/*	margin-bottom: 2em;*/
+	color: SlateBlue;
+	font-size: 1.5em;
+	font-family: URW Chancery L, cursive;
+}
+
+#search {
+	margin: 0 auto;
+    display: block;
+	border: 3px solid #F0E68C;
+	font-size: 2em;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+    
+}
+button {
+	margin: 0 auto;
+    display: block;
+	color: lightslategrey;
+	font-size: 1.2em;
+	margin-bottom: 1.5em;
+	margin-top: 0.1em
+}
+
+#canvas {
+	display: none;
+    width: 832px;
+    height: 832px;
+    border: 20px solid 	#ADD8E6;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 2em;
+}
+  
+#canvas #windiv {
+    display: none; 
+}
+  
+#canvas .banner {
+    width: 840px;
+    font-size: 50px;
+    background-color: #f5f5dc;
+    position: relative;
+    text-align: center;
+    top: -60px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.55);
+    left: -15px;
+    z-index: 2; 
+}
+ 
+#canvas .innerSquare {
+    width: 275px;
+    height: 275px;
+    float: left; 
+	background-size: 823px 823px;
+	margin-left: auto;
+    margin-right: auto;
+}
+    
+#canvas .innerSquare.imageSquare {
+      font-size: 24px;
+      text-align: center;
+      border: 1px outset  black;
+	margin-left: auto;
+    margin-right: auto;
+      
+}
+      
+#canvas .innerSquare.imageSquare:hover {
+        background-color: lightgray; 
+}
+    
+#canvas .innerSquare.clickable:hover {
+      opacity: 0.4;
+      filter: alpha(opacity=40); 
+}
+    
+#canvas .innerSquare.blank {
+      border: 1px inset black; 
+}
+
+#previews {
+	display: none;
+  width: 68em;
+  height: 13em;
+  background-color: lightgrey;
+  overflow: scroll;
+  padding-left: 30px;
+  margin-top: 1em; 
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+#previews .mini {
+    width: 10em;
+    height: 10em;
+    margin-top: 1em;
+    margin-right: 1em; 
 }
