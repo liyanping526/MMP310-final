@@ -21,7 +21,7 @@ $.getJSON(URL, function(photo){
 					  const pic = photo.hits[a].largeImageURL;
 //					  
 					  console.log(pic);
-//						
+				 	
 
 (function() {
   var Blank, Puzzle, Tile,
@@ -96,15 +96,20 @@ $.getJSON(URL, function(photo){
     };
 
     Puzzle.prototype.renderBoard = function() {
+    
       var blank, t, _i, _len, _ref,
         _this = this;
       blank = this.blankPosition();
       $('#canvas').html('');
+        
       if (this.checkIfWon()) {
         $('#canvas').append('<span id="windiv"><img src="' + this.image + '"/><div class="banner"> You Won!</div></span>');
+        $('audio#pop')[0].play();
+          
         return $('#windiv').show('slow');
       } else {
         _ref = this.places;
+          $('audio#pop')[0].pause();
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           t = _ref[_i];
           t.show(blank);
