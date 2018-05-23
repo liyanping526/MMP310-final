@@ -48,7 +48,7 @@ input[type=text]:focus {
 }
 button{
 	margin: 0 auto;
-    display:block;
+    display:none;
     background-color:#33C3F0;
 	color: white;
 	font-size: 1.2em;

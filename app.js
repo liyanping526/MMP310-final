@@ -1,3 +1,5 @@
+ // Get pixabay API
+
 $(document).ready(function() {
 	$('#search').on("keypress", function(event) {
 		if (event.which == 13) {
@@ -14,6 +16,8 @@ $(document).ready(function() {
 		              + "&imageHeight=700px"
 		              + "&imageWidth=700px"
 		           	  + offset;
+			
+//	Retrieving photo URL from Pixabay 
 
 $.getJSON(URL, function(photo){
 	   console.log(photo);
@@ -22,10 +26,13 @@ $.getJSON(URL, function(photo){
 //					  
 					  console.log(pic);
 				 	
-
+// The Main function tear photo to puzzle
+				
 (function() {
   var Blank, Puzzle, Tile,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+//	Reference the images spare them to 8 part 
 
   Puzzle = (function() {
     function Puzzle(images) {
@@ -59,6 +66,8 @@ $.getJSON(URL, function(photo){
       this.initialPlaces = this.places.slice(0);
       this.mixup();
     }
+	  
+//	Random images part  
 
     Puzzle.prototype.mixup = function() {
       var blankpos, i, randomNum, _i, _results;
@@ -149,6 +158,8 @@ $.getJSON(URL, function(photo){
 
   })();
 
+//		The tile isolate image
+	
   Tile = (function() {
     function Tile(position, width, height, x, y, image) {
       this.position = position;
@@ -210,6 +221,15 @@ $.getJSON(URL, function(photo){
 				 $('#previews').show();	
 				 $('#canvas').show();
 				 $('#search').hide();
+				 $('#text').hide();
+				 $('#reset').show().css({
+					margin: '0 auto',
+                    display: 'block',
+					backgroundcolor:'#33C3F0',
+					color: 'white',
+					fontsize: '1.2em',
+					marginbottom: '1.5em',
+					borderradius: '6px'});
 				  
 				}
 });
@@ -222,3 +242,5 @@ $(document).ready(function () {
         location.reload();
     });
 });
+
+// puzzle function source by Declan Whelan
